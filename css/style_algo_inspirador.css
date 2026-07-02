@@ -1,11 +1,4 @@
-body {
-    background-color: #f5ddf5;
-    font-family: "Times New Roman", serif;
-    margin: 0;
-    padding: 0;
-}
-
-
+/* LER ALGO INSPIRADOR */
 
 .container {
     display: grid;
@@ -13,23 +6,37 @@ body {
     gap: 20px;
 }
 
-
-
 .card {
-    background-color:#e78ac3 ;
+    background-color: #e78ac3;
     border-radius: 10px;
-    border: 10px;
     width: 70%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.icones {
+    display: flex;
+    gap: 15px;
+}
 
+.foto {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.texto {
+    width: 75%;
+    font-size: 18px;
+    line-height: 1.5;
+}
 
 .voltar {
     font-size: 35px;
     margin-bottom: 10px;
 }
-
-
 
 h1 {
     text-align: center;
@@ -38,8 +45,6 @@ h1 {
     font-weight: normal;
 }
 
-
-
 h2 {
     text-align: center;
     font-size: 18px;
@@ -47,15 +52,11 @@ h2 {
     font-weight: normal;
 }
 
-
-
 .texto {
     font-size: 18px;
     color: black;
     line-height: 1.5;
 }
-
-
 
 .foto {
     width: 30px;

@@ -6,14 +6,8 @@
 }
 
 body{
-    background-color: #FCF1FC;
-    background-image: url("../imagens/fundo_body.png");
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-size: contain;
-
+    background-color: #ffdffb;
     min-height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,6 +18,11 @@ body{
     max-width:95%;
     height:700px;
     display:flex;
+    background-image: url("../imagens/fundo_body.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius:22px;
 }
 
 .lado-esquerdo{

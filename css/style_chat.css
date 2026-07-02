@@ -1,6 +1,8 @@
 body{
     background-color: #f8f0f8;
     font-family: Georgia, serif;
+    display: flex;
+    justify-content: center;
 }
 
 .container{
@@ -8,6 +10,7 @@ body{
     margin: auto;
     margin-top: 30px;
     text-align: center;
+    align-items: center;
 }
 
 .voltar{
@@ -27,6 +30,12 @@ h2{
     font-size: 30px;
 }
 
+h3{
+    margin: 0;
+    font-size: 20px;
+    font-weight: normal;
+}
+
 p{
     margin-top: 0;
     font-size: 20px;
@@ -40,16 +49,34 @@ p{
     font-size: 25px;
 }
 
-
-.imagem{
-    display: grid;
-     place-items: center;
-     margin-left: auto;
-     margin-right: auto;
-     width: 50%;
+.card{
+    width: 500px;
+    margin: 15px auto;
+    padding: 10px;
+    background-color: #e78ac3;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centraliza o h3 */
+    position: relative;      /* referência para a imagem */
 }
 
-.foto {
-    width: 50px;
+.card img{
+    width: 40px;
+    position: absolute;
+    left: 20px;
 }
 
+.card_seguro{   
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centraliza o h3 */
+    position: relative;      /* referência para a imagem */
+}
+
+.card_seguro img{
+    width: 40px;
+    position: absolute;
+    left: 20px;
+}
