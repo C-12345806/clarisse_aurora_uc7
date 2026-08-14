@@ -1,5 +1,7 @@
 * {
     margin: 0;
+    text-decoration: none;
+    color: inherit;
 }
 
 body {
@@ -89,4 +91,9 @@ nav {
 .cards_recursos_aurora h4 {
     font-size: 18px;
     font-weight: normal;
+}
+
+.img{
+    width: 15px;
+    height: 20px;
 }
