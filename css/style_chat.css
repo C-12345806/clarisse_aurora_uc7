@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    text-decoration: none;
+    color: inherit;
+}
+
 body{
     background-color: #f8f0f8;
     font-family: Georgia, serif;

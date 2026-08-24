@@ -1,5 +1,7 @@
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
     color: inherit;
 }
@@ -8,32 +10,70 @@ body {
     background: #f9e8ff;
     font-family: Georgia, serif;
     width: 100%;
-    height: 260px;
+    min-height: 100vh;
 }
 
+/* =========================
+   HEADER
+========================= */
+
 header {
+    width: 100%;
+    min-height: 80px;
+    padding: 15px 30px;
+
     background-color: #f2c2fc;
-    color: #000000;
-    padding: 1em;
+
     display: flex;
-    justify-content: flex-start;
-    gap: 30px;
     align-items: center;
-    flex-direction: column-reverse;
+    justify-content: space-between;
+
+    position: relative;
 }
 
 header h1 {
     color: #5c2d91;
     font-size: 50px;
+    margin: 0;
 }
+
+/* Menu normal no computador */
 
 nav {
     display: flex;
-    gap: 100px;
+    align-items: center;
+    gap: 50px;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 
-/* INDEX */
+/* =========================
+   BOTÃO 3 BARRINHAS
+========================= */
+
+.menu-btn {
+    display: none;
+
+    background: transparent;
+    border: none;
+
+    color: #5c2d91;
+
+    font-size: 32px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   INDEX
+========================= */
+
 .painelAurora {
     padding: 50px;
     display: flex;
@@ -47,39 +87,54 @@ nav {
 }
 
 .painelAurora h2 {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     font-size: 35px;
     font-weight: normal;
 }
 
+/* =========================
+   CARDS
+========================= */
+
 .cardsAurora {
-    display: flex;
+    display: grid;
+
+    grid-template-columns: repeat(4, 180px);
+
     justify-content: center;
     gap: 30px;
-    width: 89%;
-    flex-wrap: wrap;
+
+    width: 100%;
     padding: 50px;
+
     border-radius: 20px;
+
     align-items: center;
     text-align: center;
-    height: 100%;
 }
 
 .cards_recursos_aurora {
     width: 180px;
     height: 220px;
+
     border: 1px solid #d68fe7;
     border-radius: 20px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
     padding: 15px;
+
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .cards_recursos_aurora img {
     width: 55px;
+    height: auto;
     margin-bottom: 10px;
 }
 
@@ -93,7 +148,237 @@ nav {
     font-weight: normal;
 }
 
-.img{
+/* Imagem pequena */
+.img {
     width: 15px;
     height: 20px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+
+
+@media (max-width: 600px) {
+
+    header {
+        min-height: 80px;
+        padding: 15px 20px;
+
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+        /* Mostra as 3 barrinhas */
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        background-color: #f2c2fc;
+
+        flex-direction: column;
+        align-items: center;
+
+        gap: 20px;
+
+        padding: 20px 0;
+
+        z-index: 100;
+    }
+
+        nav.ativo {
+        display: flex;
+    }
+
+        nav a {
+        font-size: 18px;
+    }
+}
+
+
+    .painelAurora {
+        padding: 40px 30px;
+    }
+
+    .painelAurora h1 {
+        font-size: 45px;
+    }
+
+    .painelAurora h2 {
+        font-size: 28px;
+    }
+
+    .cardsAurora {
+        grid-template-columns: repeat(2, 180px);
+        padding: 30px;
+        gap: 25px;
+    }
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    header {
+        width: 100%;
+        height: 70px;
+        min-height: 70px;
+
+        padding: 10px 20px;
+
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    /* Mostra as 3 barrinhas */
+    .menu-btn {
+        display: block;
+    }
+
+    /* Esconde o menu */
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        background-color: #f2c2fc;
+
+        padding: 20px 0;
+
+        flex-direction: column;
+        align-items: center;
+
+        gap: 20px;
+
+        z-index: 999;
+    }
+
+    /* Quando clicar nas barrinhas */
+    nav.ativo {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+
+    /* PAINEL */
+
+    .painelAurora {
+        width: 100%;
+        padding: 30px 20px;
+
+        align-items: center;
+        text-align: center;
+    }
+
+    .painelAurora h1 {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .painelAurora h2 {
+        width: 100%;
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
+
+    /* CARDS */
+
+    .cardsAurora {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        justify-items: center;
+
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+    .cards_recursos_aurora {
+        width: min(100%, 280px);
+        height: 210px;
+    }
+
+    .cards_recursos_aurora h3 {
+        font-size: 22px;
+    }
+
+    .cards_recursos_aurora h4 {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================
+   CELULARES PEQUENOS
+========================= */
+
+@media (max-width: 380px) {
+
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    .painelAurora {
+        padding: 25px 15px;
+    }
+
+    .painelAurora h1 {
+        font-size: 30px;
+    }
+
+    .painelAurora h2 {
+        font-size: 20px;
+    }
+
+    .cardsAurora {
+        padding: 15px;
+    }
+
+    .cards_recursos_aurora {
+        width: 100%;
+        max-width: 260px;
+    }
 }

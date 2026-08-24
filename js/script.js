@@ -9,3 +9,14 @@ formulario.addEventListener("submit", function(event) {
 
     window.location.href = "inicio.html";
 });
+
+function abrirMenu() {
+    document.getElementById("menu").classList.toggle("ativo");
+}
+
+ const menuBtn = document.getElementById("menuBtn");
+    const menu = document.getElementById("menu");
+
+    menuBtn.addEventListener("click", function () {
+        menu.classList.toggle("ativo");
+    });
